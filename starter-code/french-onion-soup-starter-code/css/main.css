@@ -8,22 +8,36 @@ html {
   font-size: 18px
 }
 
-#soupImage {
-  display: inline;
-  width: 1125px;
-  height: 900px;
-}
-
-#header {
-  position: absolute;
-  top: 400px;
-  left: 130px;
-  width: 90%;
+.header {
   color: white;
-  font-size: 46px;
+  background-image: url("../images/soup.jpg");
+  background-size: cover;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: bottom;
 }
 
-#textbody {
+.header img {
+  overflow: hidden;
+}
+
+.textbody img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 80%;
+  max-width: 650px;
+}
+
+.header h1 {
+  font-size: 80px;
+  font-weight: normal;
+}
+
+.textbody {
   display: inline;
   margin-bottom: 100px;
   margin-left: 100px;
@@ -31,18 +45,18 @@ html {
   margin-top: 100px;
 }
 
-#intro {
+.intro {
   margin-bottom: auto;
   margin-left: 120px;
   margin-right: 120px;
   margin-top: 70px;
 }
 
-#recipeinfo {
+.recipeinfo {
   left: 200px;
 }
 
-#ingredients {
+.ingredients {
   margin-bottom: auto;
   margin-left: 120px;
   margin-right: 120px;
@@ -50,14 +64,17 @@ html {
   border-top: 2px solid darkgrey;
 }
 
-ul {
-margin:0;
-list-style-type: none;
-padding-left: 0px;
+.ingredients ul {
+  margin:0;
+  list-style-type: none;
+  padding-left: 0px;
 }
-li:before { content: "- ";}
 
-#directions {
+.ingredients li:before {
+  content: "- ";
+}
+
+.directions {
   margin-bottom: 120px;
   margin-left: 120px;
   margin-right: 120px;
@@ -65,14 +82,16 @@ li:before { content: "- ";}
   border-top: 2px solid darkgrey;
 }
 
-ol {
+.directions ol {
   counter-reset: list;
   padding-left: 0px;
 }
-ol > li {
+
+.directions ol > li {
   list-style: none;
 }
-ol > li:before {
+
+.directions ol > li:before {
   content: counter(list) ") ";
   counter-increment: list;
 }
